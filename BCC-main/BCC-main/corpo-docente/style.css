@@ -1,0 +1,61 @@
+
+html body {
+    background-color: #fff;
+    color: #333;
+}
+
+h1 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #0f5f5c;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: x-large;
+    margin-bottom: 2em;
+    color: rgba(63, 63, 63, 0.936);
+}
+
+a:hover {
+    color: #1f742c;
+}
+
+.container-docentes a {
+    color: #2f9e40;
+    font-weight: bold;
+
+}
+
+.container-docentes, .container-contato{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.docente {
+    margin-bottom: 3em;
+
+}
+
+.docente h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+    .container-docentes {
+        text-align: center;
+
+
+    }
+
+    p {
+        font-size: 14.5px;
+    }
+
+}
