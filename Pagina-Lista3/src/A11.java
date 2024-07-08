@@ -1,33 +1,19 @@
 
-package Lista03;
+package Lista02;
 
 import java.util.Scanner;
 
 public class A11 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int seg, min, hr, mais;
-        System.out.println("Digite a hora (0 a 23): ");
-        hr = input.nextInt();
-        System.out.println("Digite os minutos (0 a 59): ");
-        min = input.nextInt();
-        System.out.println("Digite os segundos (0 a 59): ");
-        seg = input.nextInt();
-        mais = seg + 1;
-        if(mais == 60){
-            seg = 00;
-            min += 1;
-            if(min == 60){
-                min = 00;
-                hr += 1;
-                if(hr == 24){
-                    hr = 00;
-                }
-            }
-            System.out.println("Hora: " + hr + ":" + min + ":" + seg);
-        }
-        else{
-            System.out.println("Hora: " + hr + ":" + min + ":" + seg);
-        }
+        double distancia, consumo, preco, gasto;
+        System.out.println("Digite a distancia a ser percorrida (km): ");
+        distancia = input.nextDouble();
+        System.out.println("Digite o consumo medio de combustivel do carro: ");
+        consumo = input.nextDouble();
+        System.out.println("Digite o preco do litro do ocmbustivel: ");
+        preco = input.nextDouble();
+        gasto = distancia / consumo * preco;
+        System.out.println("O valor a ser gasto em combustivel na viagem sera de R$" + gasto);
     }
 }

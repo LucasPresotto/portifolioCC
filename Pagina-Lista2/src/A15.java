@@ -1,19 +1,17 @@
 
-package Lista02;
+package Lista01;
 
 import java.util.Scanner;
 
 public class A15 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double salarioBruto, salarioLiquido;
-        int dependentes;
-        System.out.println("Digite o seu salario bruto: ");
-        salarioBruto = input.nextDouble();
-        System.out.println("Digite o numero de dependente: ");
-        dependentes = input.nextInt();
-        salarioLiquido = salarioBruto - (salarioBruto * 11 / 100 + salarioBruto * 15 / 100);
-        salarioLiquido = salarioLiquido + dependentes * 150.0;
-        System.out.println("Seu salario liquido final sera de R$" + salarioLiquido);
+        double peso, engordar, emagrecer;
+        System.out.println("Digite o seu peso: ");
+        peso = input.nextDouble();
+        engordar = (15 * peso / 100) + peso;
+        emagrecer = peso - (20 * peso / 100);
+        System.out.println("Se voce engoradar 15% seu peso será Kg" + engordar);
+        System.out.println("Se voce emagrecer 20% seu peso será Kg" + emagrecer);
     }
 }

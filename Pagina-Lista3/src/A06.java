@@ -1,25 +1,33 @@
 
-package Lista03;
+package Lista02;
 
 import java.util.Scanner;
 
 public class A06 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n1, n2, n3, menor;
-        System.out.println("Digite o primeiro numero: ");
-        n1 = input.nextInt();
-        System.out.println("Digite o segunod numero: ");
-        n2 = input.nextInt();
-        System.out.println("Digite o terceiro numero: ");
-        n3 = input.nextInt();
-        menor = n1;
-        if(n2 < menor){
-            menor = n2;
+        double prova1, prova2, trabalho, frequencia;
+        boolean aprovado;
+        System.out.println("Digite a nota da prova1: ");
+        prova1 = input.nextDouble();
+        System.out.println("Digite a nota do prova2: ");
+        prova2 = input.nextDouble();
+        System.out.println("Digite a nota do trabalho: ");
+        trabalho = input.nextDouble();
+        System.out.println("Digite a frequencia: ");
+        frequencia = input.nextDouble();
+        if(trabalho >= 7 && (prova1 >= 6 || prova2 >= 6) && frequencia >=70){
+            aprovado = true;
+            System.out.println("Aprovado: " + aprovado);
         }
-        if(n3 < menor){
-            menor = n3;
+        else if (trabalho >= 6 && (prova1 >= 6 || prova2 >= 6) && frequencia >=90){
+            aprovado = true;
+            System.out.println("Aprovado: " + aprovado);
         }
-        System.out.println("O menor numero é o " + menor);
+        else{
+            aprovado = false;
+            System.out.println("Aprovado: " + aprovado);
+        }
+    
     }
 }

@@ -1,19 +1,26 @@
 
-package Lista03;
+package Lista02;
 
 import java.util.Scanner;
 
 public class A04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double num;
-        System.out.println("Digite um número: ");
-        num = input.nextDouble();
-        if(num % 2 == 0){
-            System.out.println("O número é par");
+        double peso, altura, imc;
+        boolean acimaPeso;
+        System.out.println("Digite o peso(em kg): ");
+        peso = input.nextDouble();
+        System.out.println("Digite a altura(em metros): ");
+        altura = input.nextDouble();
+        imc = peso / (altura * altura);
+        System.out.println("O indice de massa corporal é: " + imc);
+        if(imc > 25){
+            acimaPeso = true;
+            System.out.println("Acima do Peso: " + acimaPeso);
         }
         else{
-            System.out.println("o número é ímpar");
+            acimaPeso = false;
+            System.out.println("Acima do Peso: " + acimaPeso);
         }
     }
 }

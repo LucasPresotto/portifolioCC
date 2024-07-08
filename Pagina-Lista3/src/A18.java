@@ -1,31 +1,22 @@
 
-package Lista03;
+package Lista02;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class A18 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double saldo, saldoN;
-        System.out.println("Digite o saldo medio do cliente: ");
-        saldo = input.nextDouble();
-        if(saldo >= 0 && saldo <= 500){
-            System.out.println("Nenhum credito");
-        }
-        else if(saldo > 500 && saldo <= 1000){
-            saldoN = 0.30 * saldo;
-            System.out.println("Saldo medio: " + saldo);
-            System.out.println("Valor do credito: " + saldoN);
-        }
-        else if(saldo > 1000 && saldo <= 3000){
-            saldoN = 0.4 * saldo;
-            System.out.println("Saldo medio: " + saldo);
-            System.out.println("Valor do credito: " + saldoN);
-        }
-        else if(saldo > 3000){
-            saldoN = 0.5 * saldo;
-            System.out.println("Saldo medio: " + saldo);
-            System.out.println("Valor do credito: " + saldoN);
-        }
+        int diaNasc, mesNasc, anoNasc, diaAtual, mesAtual, anoAtual, diasVividos;
+        System.out.println("Digite o ano de seu nascimento (dia, mes, ano): ");
+        diaNasc = input.nextInt();
+        mesNasc = input.nextInt();
+        anoNasc = input.nextInt();
+        System.out.println("Digite o ano atual (dia, mes, ano): ");
+        diaAtual = input.nextInt();
+        mesAtual = input.nextInt();
+        anoAtual = input.nextInt();
+        diasVividos = ((anoAtual - anoNasc) * 360) + ((mesAtual - mesNasc) * 30) + (diaAtual - diaNasc);
+        System.out.println("O total de dias vividos foi " + diasVividos);
     }
 }

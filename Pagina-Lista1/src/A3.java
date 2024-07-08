@@ -1,17 +1,20 @@
 
-package Lista01;
+package Atividades;
 
 import java.util.Scanner;
+
 
 public class A3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int num1, num2, somaQuad;
-        System.out.println("Digite um número: ");
-        num1 = input.nextInt();
-        System.out.println("Digite outro número: ");
-        num2 = input.nextInt();
-        somaQuad = (num1 * num1) + (num2 * num2);
-        System.out.println("A soma dos quadrados dos numeros e: " + somaQuad);
+        String nome, end, tel;
+        System.out.println("Digite o nome: ");
+        nome = input.nextLine();
+        System.out.println("Digite o endereco: ");
+        end = input.nextLine();
+        System.out.println("Digite o telefone: ");
+        tel = input.nextLine();
+        System.out.println(nome + " com o telefone " + tel + " mora no endereco " + end);
+        
     }
 }

@@ -1,22 +1,26 @@
 
-package Lista03;
+package Lista02;
 
 import java.util.Scanner;
 
 public class A05 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int num;
-        System.out.println("digite um número: ");
-        num = input.nextInt();
-        if(num <= 10){
-            System.out.println("F1");
+        double prova1, prova2, trabalho;
+        boolean aprovado;
+        System.out.println("Digite a nota da prova1: ");
+        prova1 = input.nextDouble();
+        System.out.println("Digite a nota do prova2: ");
+        prova2 = input.nextDouble();
+        System.out.println("Digite a nota do trabalho: ");
+        trabalho = input.nextDouble();
+        if(trabalho >= 7 && (prova1 >= 6 || prova2 >= 6)){
+            aprovado = true;
+            System.out.println("Aprovado: " + aprovado);
         }
-        else if(num > 10 && num <= 100){
-            System.out.println("F2");
-        }
-        else if(num > 100){
-            System.out.println("F3");
+        else{
+            aprovado = false;
+            System.out.println("Aprovado: " + aprovado);
         }
     }
 }

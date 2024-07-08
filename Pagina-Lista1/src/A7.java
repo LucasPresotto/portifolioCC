@@ -1,22 +1,30 @@
 
-package Lista01;
+package Atividades;
 
 import java.util.Scanner;
+
 
 public class A7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double tipo1, tipo2, tipo3, valorTot;
-        System.out.println("Digite a qauntidade vendida do picole tipo1: ");
-        tipo1 = input.nextDouble();
-        System.out.println("Digite a qauntidade vendida do picole tipo2: ");
-        tipo2 = input.nextDouble();
-        System.out.println("Digite a qauntidade vendida do picole tipo3: ");
-        tipo3 = input.nextDouble();
-        tipo1 = tipo1 * 1.50;
-        tipo2 = tipo2 * 2.00;
-        tipo3 = tipo3 * 0.75;
-        valorTot = tipo1 + tipo2 + tipo3;
-        System.out.println("O valor arrecadado do picole tipo 1 foi de: " + tipo1 + ", do picole tipo 2: " + tipo2 + ", o picole tipo3: " + tipo3 + " e o valor total arrecadado foi de " + valorTot);
+        int soma;
+        int quad[] = new int[4];
+        int vetor[] = new int[4];
+        for(int i = 0; i<1; i++){
+        System.out.println("Digite 4 números: ");
+        vetor[0] = input.nextInt();
+        vetor[1] = input.nextInt();
+        vetor[2] = input.nextInt();
+        vetor[3] = input.nextInt();
+        } 
+        quad[0] = vetor[0] * vetor[0];
+        quad[1] = vetor[1] * vetor[1];
+        quad[2] = vetor[2] * vetor[2];
+        quad[3] = vetor[3] * vetor[3];
+        
+        soma = quad[0] + quad[1] + quad[2] + quad[3];
+        
+        System.out.println("Os quadrados dos numeros sao: " + soma);
     }
 }
+ 

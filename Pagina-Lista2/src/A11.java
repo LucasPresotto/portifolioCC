@@ -1,19 +1,23 @@
 
-package Lista02;
+package Lista01;
 
 import java.util.Scanner;
 
 public class A11 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double distancia, consumo, preco, gasto;
-        System.out.println("Digite a distancia a ser percorrida (km): ");
-        distancia = input.nextDouble();
-        System.out.println("Digite o consumo medio de combustivel do carro: ");
-        consumo = input.nextDouble();
-        System.out.println("Digite o preco do litro do ocmbustivel: ");
-        preco = input.nextDouble();
-        gasto = distancia / consumo * preco;
-        System.out.println("O valor a ser gasto em combustivel na viagem sera de R$" + gasto);
+        int segundos, minutos = 0, horas = 0;
+        System.out.println("Digite a quantidades de segundos do video: ");
+        segundos = input.nextInt();
+        while(segundos >= 60){
+            segundos = segundos - 60;
+            minutos++;
+            if(minutos >=60){
+                horas++;
+                minutos = minutos - 60;
+            }
+        }
+        System.out.println("A duracao do video e " + horas + "h" + minutos + "m" + segundos + "s");
+        
     }
 }
